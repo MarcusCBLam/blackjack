@@ -1,0 +1,79 @@
+%tableCardRow {
+  display: flex;
+  flex-direction: row;
+}
+
+%pad {
+  padding: 10px;
+}
+
+%padXL {
+  padding: 30px;
+}
+
+$font-large: 50px;
+$font-medium: 20px;
+$font-small: 14px;
+
+#gameTable {
+  background: green;
+  flex: 1;
+  border-radius: 5px;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+
+  .tablePlayerName {
+    @extend %pad;
+    font-size: 30px;
+    font-weight: 700;
+    color: darkgreen;
+  }
+
+  .tableCardRowTop {
+    @extend %tableCardRow;
+
+    .tableScore {
+      @extend %pad;
+      font-size: $font-large;
+      color: white;
+      padding-left: 30px;
+      padding-right: 25px;
+    }
+  }
+
+  .tableCardRowBottom {
+    @extend %tableCardRow;
+    justify-content: flex-end;
+
+    .tableScore {
+      @extend %pad;
+      font-size: $font-large;
+      color: white;
+      padding-left: 25px;
+      padding-right: 30px;
+    }
+  }
+
+  .tableCards {
+    @extend %pad;
+    border: solid 1px darkgreen;
+    border-radius: 5px;
+  }
+
+  .tableInstructions {
+    @extend %pad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: white;
+    font-size: $font-medium;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #gameTable {
+    width: 100%;
+  }
+}

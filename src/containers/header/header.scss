@@ -1,0 +1,37 @@
+header {
+  .game_title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
+  }
+
+  nav {
+    background-color: #eee;
+    ul {
+      max-width: 1280px;
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      overflow: auto;
+
+      li {
+        float: right;
+
+        a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 2px 20px;
+          margin: 5px 0px;
+          text-decoration: none;
+          border: solid 1px #ccc;
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+}

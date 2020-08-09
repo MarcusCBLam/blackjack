@@ -1,0 +1,12 @@
+#deck_container {
+  background: green;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1340px) {
+  #deck_container {
+    margin: 10px;
+    padding: 10px;
+  }
+}

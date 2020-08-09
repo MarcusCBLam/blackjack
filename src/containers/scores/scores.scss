@@ -1,0 +1,26 @@
+#scores {
+  display: flex;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+
+  .score_label {
+    padding: 5px 10px;
+  }
+
+  .score_colon {
+    font-size: 20px;
+  }
+
+  .score_number {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    width: 60px;
+    text-align: center;
+  }
+}

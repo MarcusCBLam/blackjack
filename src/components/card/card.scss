@@ -1,0 +1,135 @@
+/* definition for the deck of cards using image sprite */
+
+// card dimensions
+$width: 113px;
+$height: 158px;
+
+%card-dimension {
+  width: $width;
+  height: $height;
+  margin: 5px;
+}
+
+// x coords for the number
+$xPos1: 0;
+$xPos2: $width * -1;
+$xPos3: $width * -2;
+$xPos4: $width * -3;
+$xPos5: $width * -4;
+$xPos6: $width * -5;
+$xPos7: $width * -6;
+$xPos8: $width * -7;
+$xPos9: $width * -8;
+$xPos10: $width * -9;
+$xPosJ: $width * -10;
+$xPosQ: $width * -11;
+$xPosK: $width * -12;
+
+/* spade cards *********************************************/
+$spadeCards: (
+  spadeA: $xPos1,
+  spade2: $xPos2,
+  spade3: $xPos3,
+  spade4: $xPos4,
+  spade5: $xPos5,
+  spade6: $xPos6,
+  spade7: $xPos7,
+  spade8: $xPos8,
+  spade9: $xPos9,
+  spadeX: $xPos10,
+  spadeJ: $xPosJ,
+  spadeQ: $xPosQ,
+  spadeK: $xPosK,
+);
+
+@each $cardID, $xPos in $spadeCards {
+  .#{$cardID} {
+    @extend %card-dimension;
+    background: url("/img/deck.png") $xPos ($height * -1);
+  }
+}
+
+/* heart cards *********************************************/
+$heartCards: (
+  heartA: $xPos1,
+  heart2: $xPos2,
+  heart3: $xPos3,
+  heart4: $xPos4,
+  heart5: $xPos5,
+  heart6: $xPos6,
+  heart7: $xPos7,
+  heart8: $xPos8,
+  heart9: $xPos9,
+  heartX: $xPos10,
+  heartJ: $xPosJ,
+  heartQ: $xPosQ,
+  heartK: $xPosK,
+);
+
+@each $cardID, $xPos in $heartCards {
+  .#{$cardID} {
+    @extend %card-dimension;
+    background: url("/img/deck.png") $xPos 0;
+  }
+}
+
+/* club cards *********************************************/
+$clubCards: (
+  clubA: $xPos1,
+  club2: $xPos2,
+  club3: $xPos3,
+  club4: $xPos4,
+  club5: $xPos5,
+  club6: $xPos6,
+  club7: $xPos7,
+  club8: $xPos8,
+  club9: $xPos9,
+  clubX: $xPos10,
+  clubJ: $xPosJ,
+  clubQ: $xPosQ,
+  clubK: $xPosK,
+);
+
+@each $cardID, $xPos in $clubCards {
+  .#{$cardID} {
+    @extend %card-dimension;
+    background: url("/img/deck.png") $xPos (($height * -3)+1);
+  }
+}
+
+/* diamond cards *********************************************/
+$diamondCards: (
+  diamondA: $xPos1,
+  diamond2: $xPos2,
+  diamond3: $xPos3,
+  diamond4: $xPos4,
+  diamond5: $xPos5,
+  diamond6: $xPos6,
+  diamond7: $xPos7,
+  diamond8: $xPos8,
+  diamond9: $xPos9,
+  diamondX: $xPos10,
+  diamondJ: $xPosJ,
+  diamondQ: $xPosQ,
+  diamondK: $xPosK,
+);
+
+@each $cardID, $xPos in $diamondCards {
+  .#{$cardID} {
+    @extend %card-dimension;
+    background: url("/img/deck.png") $xPos (($height * -2)+1);
+  }
+}
+
+/* back of cards *********************************************/
+
+/* deck back */
+.card_back {
+  @extend %card-dimension;
+  background: url("/img/deck.png") 0px (($height * -4)+1);
+}
+
+.empty {
+  @extend %card-dimension;
+  background: url("/img/deck.png") -114px (($height * -4)+1);
+}

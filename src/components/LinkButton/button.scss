@@ -1,0 +1,50 @@
+%default_button {
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+  width: 300px;
+  margin: 20px auto 0px auto;
+  -webkit-filter: brightness(100%);
+  cursor: pointer;
+}
+
+%hover_fx {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.primary {
+  @extend %default_button;
+  background: green;
+  color: white;
+  &:hover {
+    @extend %hover_fx;
+  }
+}
+
+.disabled {
+  @extend %default_button;
+  background: grey;
+  display: inline-block;
+  width: 200px;
+  margin: 2px;
+  cursor: not-allowed;
+}
+
+.game_button {
+  @extend %default_button;
+  display: inline-block;
+  background: orange;
+  width: 200px;
+  margin: 2px;
+  &:hover {
+    @extend %hover_fx;
+  }
+}
